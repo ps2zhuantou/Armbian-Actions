@@ -10,6 +10,7 @@ on:
         type: choice
         options:
           - 'nanopct4'
+          - 'nanopct6'
           - 'rock-5b'
           - 'rock-5c'
           - 'rock-5t'
