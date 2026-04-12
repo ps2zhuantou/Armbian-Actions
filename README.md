@@ -83,8 +83,8 @@
 | **Linux release** | 系统发行版 | `trixie` | `trixie`（Debian 13） `bookworm`（Debian 12） `noble`（Ubuntu 24.04） `jammy`（Ubuntu 22.04） |
 | **Build desktop** | 构建桌面版固件 | `no` | `yes`（包含桌面环境） `no`（纯命令行） |
 | **Build minimal** | 构建最小化系统 | `yes` | `yes`（轻量化） `no`（标准系统） |
-| **Build with Docker** | 使用 Docker 构建 | `no` | `yes`（容器环境） `no`（宿主环境） |
-| **Docker base image** | Docker 基础镜像 | `ubuntu:noble` | `ubuntu:jammy` `ubuntu:noble` |
+| **Build with Docker** | 使用 Docker 构建 | `yes` | `yes`（容器环境） `no`（宿主环境） |
+| **Docker base image** | Docker 基础镜像 | `ubuntu:jammy` | `ubuntu:jammy` `ubuntu:noble` |
 | **Upload deb packages** | 上传 `deb` 软件包 | `no` | `yes` `no` |
 | **Apply patches** | 应用仓库补丁 | `yes` | `yes`（应用补丁） `no`（官方原版） |
 
