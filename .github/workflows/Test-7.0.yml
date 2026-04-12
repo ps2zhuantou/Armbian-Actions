@@ -115,7 +115,8 @@ jobs:
           "${GITHUB_WORKSPACE}/scripts/apply_patches.sh"
           "${GITHUB_WORKSPACE}/scripts/rename_to_conf.sh"
           sed -i 's|https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git|https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git|g' lib/functions/configuration/main-config.sh
-          sed -i "s|7\.0-rc[1-8]|7\.0-rc${{ inputs.RC_VERSION }}|g" config/sources/mainline-kernel.conf.sh
+          # sed -i "s|7\.0-rc[1-8]|7\.0-rc${{ inputs.RC_VERSION }}|g" config/sources/mainline-kernel.conf.sh
+          sed -i "s|7\.0-rc[1-8]|7\.0|g" config/sources/mainline-kernel.conf.sh
 
       - name: Compile Kernel [ ${{ inputs.LinuxFamily }} ${{ inputs.BRANCH }} ] [ rc${{ inputs.RC_VERSION }} ]
         working-directory: /mnt/workdir/build
