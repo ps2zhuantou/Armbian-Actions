@@ -36,8 +36,10 @@ on:
         required: true
         type: choice
         options:
+          - 'forky'
           - 'trixie'
           - 'bookworm'
+          - 'resolute'
           - 'noble'
           - 'jammy'
       BUILD_DESKTOP:
@@ -58,7 +60,7 @@ on:
           - 'no'
       PREFER_DOCKER:
         description: 'Build with docker'
-        default: 'no'
+        default: 'yes'
         required: false
         type: choice
         options:
@@ -66,7 +68,7 @@ on:
           - 'no'
       DOCKER_ARMBIAN_BASE_IMAGE:
         description: 'Docker base image'
-        default: 'ubuntu:noble'
+        default: 'ubuntu:jammy'
         required: false
         type: choice
         options:
