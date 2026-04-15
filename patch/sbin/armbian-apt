@@ -99,7 +99,7 @@ EOF
 EOF
         ;;
 
-    bookworm | trixie)
+    bookworm | trixie | forky)
         # 从 bookworm 开始，非自由固件从 non-free 组件移动到 non-free-firmware 组件（与 main/contrib/non-free 并列）
         # 此更改在 2023-01-27 实施，详情请见 https://lists.debian.org/debian-boot/2023/01/msg00235.html
         cat >${source_file} <<EOF
@@ -117,7 +117,7 @@ EOF
 EOF
         ;;
 
-    focal | jammy | noble | oracular)
+    focal | jammy | noble | resolute)
         cat >${source_file} <<EOF
         deb http://${MIRROR_URL}/ubuntu-ports ${VERSION_CODENAME} main restricted universe multiverse
         #deb-src http://${MIRROR_URL}/ubuntu-ports ${VERSION_CODENAME} main restricted universe multiverse
